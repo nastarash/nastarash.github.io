@@ -5,8 +5,14 @@ export default class GetSources {
 
     getChannelTitle() {
         return fetch(this.request)
-            .then(response => response.json())
+            .then(response => {
+                if (response.ok) {
+                    return response.json()
+                }
+                throw new Error('Network response was not ok.');
+            })
             .then(data => data.sources)
-            .then(arr => arr.map(item => item.name));
+            .then(arr => arr.map(item => item.name))
+            .catch(error => alert(error.message));
     }
 }
