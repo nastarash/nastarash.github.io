@@ -1,0 +1,25 @@
+{
+  "name": "task2",
+  "version": "1.0.0",
+  "description": "Learning Babel and ES2017+",
+  "main": "index.html",
+  "scripts": {
+    "build": "babel js --out-file compiled.js",
+    "watch": "babel js --watch --out-file compiled.js "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nastarash/nastarash.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nastarash/nastarash.github.io/issues"
+  },
+  "homepage": "https://github.com/nastarash/nastarash.github.io#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6"
+  }
+}
