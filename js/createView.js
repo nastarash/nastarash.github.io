@@ -17,7 +17,7 @@ export default class View {
 
     createNumSection() {
         return document.body.firstElementChild.appendChild(document.createElement('form')).outerHTML = `<div id ="inputFilter">Please,enter number of articles:
-                                                                                                                            <input id="filterNews" value=20>
+                                                                                                                            <input id="filterNews">
                                                                                                         </div>`
     }
 
