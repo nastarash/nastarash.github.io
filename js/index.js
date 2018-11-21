@@ -11,8 +11,7 @@ const fetchData = async () => {
     const source = await pageView.getCheckedSources();
     let data = new GetData(source, pageView.getFilter() > 100 ? 100 :
         pageView.getFilter() <= 0 ? 1 : pageView.getFilter());
-    const articles = data.getData();
-    return articles
+    return data.getData();
 }
 
 const articlesHash = async () => {
@@ -23,9 +22,8 @@ const articlesHash = async () => {
     }).join(""));
 }
 
-const addArticles = async () => {
-    return document.body.appendChild(document.createElement('form')).outerHTML = await articlesHash();
-};
-
-getNews.addEventListener("click", () => addArticles());
-getNews.addEventListener("click", () => root.innerHTML = '');
+getNews.addEventListener("click", async () => {
+    const content = await articlesHash();
+    document.body.appendChild(document.createElement('form')).outerHTML = content;
+});
+getNews.addEventListener("click", () => root.style.display ='none');

@@ -122,3 +122,15 @@ h6,
   padding: 0 2.5rem 2.5rem;
   margin: 0;
 }
+
+#errorBlock {
+  text-align: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+#errorMedia {
+  width: 100%;
+  padding-top: 10px;
+  margin: 0 auto; 
+}
