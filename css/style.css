@@ -124,6 +124,8 @@ h6,
 }
 
 #errorBlock {
+  max-width: 1200px;
+  margin: 0 auto;
   text-align: center;
   align-items: center;
   font-size: 1.5rem;

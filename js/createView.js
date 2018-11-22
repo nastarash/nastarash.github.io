@@ -31,7 +31,7 @@ export default class View {
 
     getCheckedSources() {
         return Array.from(document.getElementsByClassName('form-check-input')).reduce((accum, arrValue) => {
-            if(arrValue.checked) {
+            if (arrValue.checked) {
                 accum.push(arrValue.value);
             }
             return accum;

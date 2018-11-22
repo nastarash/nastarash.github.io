@@ -4,7 +4,7 @@ import Article from './createArticle.js';
 
 const pageView = new View();
 pageView.addCheckBoxexSection();
-pageView.createNumSection()
+pageView.createNumSection();
 pageView.createGetNewsButton();
 
 const fetchData = async () => {
@@ -26,4 +26,5 @@ getNews.addEventListener("click", async () => {
     const content = await articlesHash();
     document.body.appendChild(document.createElement('form')).outerHTML = content;
 });
-getNews.addEventListener("click", () => root.style.display ='none');
+getNews.addEventListener("click", () => root.style.display = 'none');
+getNews.addEventListener("click", () => errorBlock.style.display = 'block');
