@@ -25,7 +25,7 @@ export default class Article {
                     <div class="card-title">
                         <h5 class="card-title">${this.title}</h5>
                         <h6 class="card-title">${this.author}</h6>
-                        <a href=${this.articleUrl}>${this.sourceName}</a>
+                        <a href=${this.articleUrl} class="article-link">${this.sourceName}</a>
                     </div>
                     <p class="card-text">${this.publishedAt}</p>
                     <p class="card-text">${this.description}</p>

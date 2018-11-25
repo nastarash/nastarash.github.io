@@ -17,7 +17,7 @@ export default class View {
 
     createNumSection() {
         return document.body.firstElementChild.appendChild(document.createElement('form')).outerHTML = `<div id ="inputFilter">Please,enter number of articles:
-                                                                                                                            <input id="filterNews" value=20>
+                                                                                                                            <input id="filterNews">
                                                                                                         </div>`
     }
 
@@ -31,7 +31,7 @@ export default class View {
 
     getCheckedSources() {
         return Array.from(document.getElementsByClassName('form-check-input')).reduce((accum, arrValue) => {
-            if(arrValue.checked) {
+            if (arrValue.checked) {
                 accum.push(arrValue.value);
             }
             return accum;
