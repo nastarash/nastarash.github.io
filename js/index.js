@@ -1,6 +1,8 @@
 import GetData from './getData.js';
 import View from './createView.js';
 import Article from './createArticle.js';
+import '../css/style.scss';
+import '../css/errorPage.scss';
 
 const pageView = new View();
 pageView.addCheckBoxexSection();
