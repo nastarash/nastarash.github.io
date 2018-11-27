@@ -26,7 +26,7 @@ export default class View {
     }
 
     async addCheckBoxexSection() {
-        return document.body.firstElementChild.appendChild(document.createElement('form')).outerHTML = await this.createSources();
+       return document.body.firstElementChild.appendChild(document.createElement('form')).outerHTML = await this.createSources();
     };
 
     getCheckedSources() {
