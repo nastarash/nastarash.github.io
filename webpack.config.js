@@ -1,10 +1,9 @@
 var path = require('path');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    //mode: 'development',
-    //mode: 'production',
     entry: ['babel-polyfill', 'whatwg-fetch', './js/index.js'],
     output: {
         filename: 'bundle.js',
@@ -35,10 +34,9 @@ module.exports = {
     },
     plugins: [
         new ExtractTextPlugin('style.css'),
-        new HtmlWebPackPlugin()
-    ],
-    devServer: {
-        compress: true,
-        port: 9000
-    }
+        new CleanWebpackPlugin(),
+        new HtmlWebpackPlugin({
+            title: 'NewsApi'
+        })
+    ]
 };

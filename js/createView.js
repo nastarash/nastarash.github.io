@@ -14,19 +14,26 @@ export default class View {
                 return checkBox.cretateCheckBox()
             }).join(''));
     }
+    createHeader() {
+        return document.body.appendChild(document.createElement('div')).innerHTML = `<div id="root">Get lates news by following: </div>`
+    }
+    createFooter() {
+        return document.getElementById('root').appendChild(document.createElement('form')).outerHTML = `<footer id="copyRight">Powered by <a href="https://newsapi.org/" title="News Api" target="_blank">News Api</a>
+        </footer>`
+    }
 
     createNumSection() {
-        return document.body.firstElementChild.appendChild(document.createElement('form')).outerHTML = `<div id ="inputFilter">Please,enter number of articles:
+        return document.getElementById('root').appendChild(document.createElement('form')).outerHTML = `<div id ="inputFilter">Please,enter number of articles:
                                                                                                                             <input id="filterNews">
                                                                                                         </div>`
     }
 
     createGetNewsButton() {
-        return document.body.firstElementChild.appendChild(document.createElement('form')).outerHTML = `<button class="btn" id="getNews">Let's go</button>`
+        return document.getElementById('root').appendChild(document.createElement('form')).outerHTML = `<button class="btn" id="getNews">Let's go</button>`
     }
 
     async addCheckBoxexSection() {
-       return document.body.firstElementChild.appendChild(document.createElement('form')).outerHTML = await this.createSources();
+        return document.getElementById('root').appendChild(document.createElement('form')).outerHTML = await this.createSources();
     };
 
     getCheckedSources() {

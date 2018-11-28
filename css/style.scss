@@ -43,7 +43,7 @@ input[type="checkbox"] {
   outline: none;
   background: #60a3d8 linear-gradient(#89bbe2, #60a3d8 50%, #378bce);
   box-shadow: inset rgba(255, 255, 255, .5) 1px 1px;
-  position:absolute;
+  position: absolute;
   top: 310px;
 }
 
@@ -75,7 +75,7 @@ input[type="checkbox"] {
 
 #root {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 0 0 45rem;
 }
 
 
@@ -116,12 +116,9 @@ input[type="checkbox"] {
   }
 }
 
-
-
 .img {
   width: 100%;
 }
-
 
 h5 {
   text-align: center;
@@ -132,12 +129,9 @@ h5 {
   color: white;
   height: 100%;
 }
-
-
 .card-body {
   padding: 0;
 }
-
 
 p,
 h6,
@@ -145,7 +139,6 @@ h6,
   padding: 0 2.5rem 2.5rem;
   margin: 0;
 }
-
 
 #errorBlock {
   max-width: 1200px;
@@ -160,7 +153,8 @@ h6,
   padding-top: 10px;
   margin: 0 auto;
 }
-#inputFilter{
-  position:absolute;
+
+#inputFilter {
+  position: absolute;
   top: 285px;
 }

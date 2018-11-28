@@ -4,9 +4,14 @@ import Article from './createArticle.js';
 import '../css/style.scss';
 
 const pageView = new View();
+pageView.createHeader();
+pageView.createFooter();
 pageView.addCheckBoxexSection();
 pageView.createNumSection();
 pageView.createGetNewsButton();
+
+
+document.body.setAttribute('class','container');
 
 const fetchData = async () => {
     const source = await pageView.getCheckedSources();
