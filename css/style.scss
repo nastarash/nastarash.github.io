@@ -1,6 +1,10 @@
+$gradient: linear-gradient(#9dc7e7, #74afdd 50%, #378bce);
+$fz: 1.5rem;
+
 * {
-  box-sizing: border-box
+  box-sizing: border-box;
 }
+
 
 html {
   -webkit-font-smoothing: antialiased;
@@ -11,6 +15,7 @@ html {
   background: #F6F6F6;
 }
 
+
 input[type="checkbox"] {
   display: inline-block;
   width: 19px;
@@ -19,6 +24,7 @@ input[type="checkbox"] {
   vertical-align: middle;
   cursor: pointer;
 }
+
 
 .btn {
   display: inline-block;
@@ -37,6 +43,8 @@ input[type="checkbox"] {
   outline: none;
   background: #60a3d8 linear-gradient(#89bbe2, #60a3d8 50%, #378bce);
   box-shadow: inset rgba(255, 255, 255, .5) 1px 1px;
+  position: absolute;
+  top: 310px;
 }
 
 .btn:first-line {
@@ -44,10 +52,12 @@ input[type="checkbox"] {
   font-weight: 700;
 }
 
+
 .btn:hover {
   color: rgb(255, 255, 255);
-  background-image: linear-gradient(#9dc7e7, #74afdd 50%, #378bce);
+  background-image: $gradient;
 }
+
 
 .btn:active {
   color: rgb(255, 255, 255);
@@ -62,15 +72,19 @@ input[type="checkbox"] {
   left: 1px;
 }
 
+
 #root {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 0 0 45rem;
 }
+
 
 .container {
   display: flex;
   flex-wrap: wrap;
+  color: #2970a9;
 }
+
 
 .card {
   margin: 1rem;
@@ -81,16 +95,20 @@ input[type="checkbox"] {
   transition: all .2s linear;
 }
 
+
 .card:hover {
   box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
   transform: translate3D(0, -5px, 0);
 }
+
 
 @media screen and (min-width: 600px) {
   .card {
     flex: 1 1 calc(50% - 2rem);
   }
 }
+
+
 
 @media screen and (min-width: 900px) {
   .card {
@@ -105,13 +123,12 @@ input[type="checkbox"] {
 h5 {
   text-align: center;
   padding: 1.5rem 2.5rem;
-  background-image: linear-gradient(120deg, #89bbe2, #60a3d8 50%, #378bce);
+  background-image: $gradient;
   margin: 0 0 2rem 0;
-  font-size: 1.5rem;
+  font-size: $fz;
   color: white;
-  height: 100%
+  height: 100%;
 }
-
 .card-body {
   padding: 0;
 }
@@ -128,11 +145,16 @@ h6,
   margin: 0 auto;
   text-align: center;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: $fz;
 }
 
 #errorMedia {
   width: 100%;
   padding-top: 10px;
-  margin: 0 auto; 
+  margin: 0 auto;
+}
+
+#inputFilter {
+  position: absolute;
+  top: 285px;
 }
