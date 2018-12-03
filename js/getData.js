@@ -6,16 +6,11 @@ export default class GetData {
     }
     getData() {
         return fetch(this.request)
-            .then(response => {
-                if (response.ok) {
-                    return response.json()
-                }
-                throw new Error('network response was not ok.');
-            })
+            .then(response => response.json())   
             .then(data => data.articles)
-            .catch(error => {
-                const er = new ErrorPage(error.message);
-                return er.networkError();
-            });
+            // .catch(error => {
+            //     const er = new ErrorPage(error.message);
+            //     return er.networkError();
+            // });
     }
 }
