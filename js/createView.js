@@ -45,7 +45,9 @@ export default class View {
         }, []);
     }
     getFilter() {
-        return document.getElementById('filterNews').value;
+        return document.getElementById('filterNews').value > 100 ? 100 :
+            document.getElementById('filterNews').value <= 0 ? 1
+                : document.getElementById('filterNews').value;
     }
 
 }
