@@ -8,4 +8,8 @@ export default class GetData {
             .then(response => response.json())   
             .then(data => data.articles);
     }
+    fakeFabricPost(){
+        const fakeRequest = new Request('http://localhost:9000', {method: 'POST', body: '{"foo":"bar"}'});
+        return console.log("Just for adding method " + fakeRequest.method)
+    }
 }

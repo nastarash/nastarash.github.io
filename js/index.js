@@ -38,6 +38,7 @@ document.body.setAttribute('class', 'container');
 const fetchData = async () => {
     const source = await pageView.getCheckedSources();
     let data = new GetData(source, pageView.getFilter());
+    data.fakeFabricPost();
     return source != 0 ? await data.getData().then(response => response.map(articleData => {
         let article = new Article(articleData);
         return article.createArticle();
