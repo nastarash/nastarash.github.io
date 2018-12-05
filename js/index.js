@@ -1,4 +1,5 @@
 import GetData from './getData.js';
+import GetDataProxy from './getData.js';
 import View from './createView.js';
 import Article from './createArticle.js';
 import '../css/style.scss';
@@ -6,6 +7,7 @@ import '../css/style.scss';
 const myErrorSingleton = (function () {
     let instance,
         errorMessage = `Ooops, network response wasn't ok`;
+
     function init() {
         return {
             showError: function () {
@@ -37,8 +39,8 @@ document.body.setAttribute('class', 'container');
 
 const fetchData = async () => {
     const source = await pageView.getCheckedSources();
-    let data = new GetData(source, pageView.getFilter());
-    data.fakeFabricPost();
+    let data = new GetDataProxy(source, pageView.getFilter());
+    console.log("method: "+ data.request.method +','+ "sources: "+data.source +','+ "url: " + data.request.url)
     return source != 0 ? await data.getData().then(response => response.map(articleData => {
         let article = new Article(articleData);
         return article.createArticle();
@@ -51,3 +53,4 @@ getNews.addEventListener("click", async () => {
     document.body.appendChild(document.createElement('form')).outerHTML = content;
 });
 getNews.addEventListener("click", () => root.style.display = 'none');
+
