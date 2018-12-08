@@ -7,3 +7,4 @@ export default class ErrorPage {
                                 <img id="errorMedia" src="media/train.gif"></div>`
     }
 }
+
