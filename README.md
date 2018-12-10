@@ -8,3 +8,9 @@ Use Babel transpiler to apply ECMAScript 2016+ features and make your applicatio
 
 task3:
 Improve application for Webpack
+
+task4:
+Design Pattern
+
+task5:
+Mongo quering, indexing
